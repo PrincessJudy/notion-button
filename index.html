@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minigrow Button</title>
+  <!-- 구글 폰트에서 둥글고 친근한 고운돋움 폰트 로드 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+    body {
+      margin: 0;
+      padding: 10px;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* 미니그로우의 친근한 폰트 감성 적용 */
+      font-family: 'Gowun Dodum', 'Malgun Gothic', sans-serif;
+    }
+    
+    /* 실제 캡처 화면의 비율과 감성을 그대로 살린 버튼 스타일 */
+    .minigrow-btn {
+      /* 캡처본에 근접한 싱그러운 숲속 초록색 적용 */
+      background-color: #3ea641; 
+      color: white;
+      
+      /* 글자 및 패딩 크기 업그레이드 */
+      font-size: 18.5px;
+      font-weight: bold;
+      padding: 15px 48px; /* 위아래, 좌우 패딩을 더 넓혀 시원한 긴 타원형 구현 */
+      letter-spacing: -0.02em; /* 한국어 가독성을 위해 자간 살짝 좁힘 */
+      
+      border: none;
+      border-radius: 9999px; /* 완전한 타원형(Pill) 디자인 */
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px; /* 사과 이모지와 텍스트 간격 조정 */
+      text-decoration: none;
+      
+      /* 조금 더 자연스럽고 화사한 초록색 계열 그림자 효과 */
+      box-shadow: 0 6px 16px rgba(62, 166, 65, 0.25);
+      
+      /* 마우스 오버 및 클릭 시 부드러운 애니메이션 효과 */
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* 마우스를 올렸을 때 살짝 커지며 부드러운 피드백 */
+    .minigrow-btn:hover {
+      background-color: #359238; /* 살짝 짙어지는 초록색 */
+      transform: translateY(-3px) scale(1.03); /* 아주 미세하게 커지는 다이내믹 효과 */
+      box-shadow: 0 8px 20px rgba(62, 166, 65, 0.35);
+    }
+
+    /* 클릭 시 쫀득하게 눌리는 느낌 제공 */
+    .minigrow-btn:active {
+      transform: translateY(-1px) scale(0.98);
+      box-shadow: 0 4px 10px rgba(62, 166, 65, 0.2);
+    }
+
+    /* 사과 이모지 크기 업그레이드 */
+    .emoji {
+      font-size: 21px;
+      /* 이모지가 텍스트와 세로축 정렬이 맞도록 살짝 보정 */
+      transform: translateY(-1px); 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 실제 사이트 연동 시 href 속성값에 링크 주소를 적어 넣으세요 -->
+  <a href="https://여기에_실제_연동할_사이트_주소_넣기" target="_top" class="minigrow-btn">
+    <span class="emoji">🍎</span> 선생님으로 시작하기
+  </a>
+
+</body>
+</html>
